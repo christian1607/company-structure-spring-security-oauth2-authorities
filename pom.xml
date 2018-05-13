@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.adamzareba</groupId>
-    <artifactId>company-structure-spring-security-oauth2-authorities</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>security-oauth</artifactId>
+    <version>1.0.0</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
