@@ -51,7 +51,9 @@ public class AuthServerOAuth2Config extends AuthorizationServerConfigurerAdapter
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) {
-        oauthServer.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()").passwordEncoder(oauthClientPasswordEncoder);
+        oauthServer.tokenKeyAccess("permitAll()")
+        		   .checkTokenAccess("isAuthenticated()")
+        		   .passwordEncoder(oauthClientPasswordEncoder);
     }
 
     @Override
@@ -61,6 +63,8 @@ public class AuthServerOAuth2Config extends AuthorizationServerConfigurerAdapter
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
-        endpoints.tokenStore(tokenStore()).authenticationManager(authenticationManager).userDetailsService(userDetailsService);
+        endpoints.tokenStore(tokenStore())
+        		 .authenticationManager(authenticationManager)
+        		 .userDetailsService(userDetailsService);
     }
 }
